@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+  <!-- build:css css/bundle.css -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- endbuild -->
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <aside id="aside">
+    <nav>
+      <div class="avatar">
+        <img src="images/cat1.jpg">
+        <h2>Katti Mattinen</h2>
+      </div>
+
+      <ul class="side-menu main">
+        <li class="active"><i class="fa fa-bar-chart"></i><span class="sidemenu-item">dashboard</span></li>
+        <li><i class="fa fa-cubes"></i><span class="sidemenu-item">item 2</span></li>
+        <li><i class="fa fa-image"></i><span class="sidemenu-item">item 3</span></li>
+        <li><i class="fa fa-server"></i><span class="sidemenu-item">item 4</span></li>
+        <li><i class="fa fa-download"></i><span class="sidemenu-item">item 5</span></li>
+        <li><i class="fa fa-area-chart"></i><span class="sidemenu-item">item 6</span></li>
+        <li><i class="fa fa-calendar"></i><span class="sidemenu-item">calendar</span></li>
+      </ul>
+
+      <!-- <form role="search" class="search-form">
+        <div class="search-wrapper">
+          <input type="search" id="search" placeholder="Search...">
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </form> -->
+
+      <ul class="side-menu secondary">
+        <li>
+          <i class="fa fa-bell"></i>
+          <span class="badge yellow sidemenu">5</span>
+          <span class="sidemenu-item">notifications</span>
+        </li>
+        <li>
+          <i class="fa fa-envelope"></i>
+          <span class="badge blue sidemenu">6</span>
+          <span class="sidemenu-item">messages</span>
+        </li>
+        <li><i class="fa fa-cog"></i>
+        <span class="sidemenu-item">settings</span></li>
+        <li><i class="fa fa-sign-out"></i>
+        <span class="sidemenu-item">logout</span></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <button id="sidemenu-button" class="sidemenu-button">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <span class="header-title">Dashboard</span>
+
+      <form role="search" class="search-form">
+        <div class="search-wrapper">
+          <input type="search" id="search" placeholder="Search...">
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </form>
+
+      <button id="notification-btn" class="sidemenu-button">
+        <i class="fa fa-bell"></i>
+        <span class="badge yellow">5</span>
+        <ul id="notification-dropdown" class="dropdown">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </button>
+
+
+      <button id="messages-btn" class="sidemenu-button">
+        <i class="fa fa-envelope"></i>
+        <span class="badge blue">6</span>
+        <ul id="messages-dropdown" class="dropdown">
+          <li>item 4</li>
+          <li>item 5</li>
+          <li>item 6</li>
+        </ul>
+      </button>
+
+      <button id="settings-btn" class="sidemenu-button">
+        <i class="fa fa-cog"></i>
+      </button>
+    </header>
+
+    <section id="main-panel">
+
+      <section class="main-panel-cardrow">
+
+          
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-github"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Repositories
+                </div>
+                <div class="card-footer">
+                  Last 30 days
+                </div>
+                <div class="card-content">
+                  25
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-git"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Commits
+                </div>
+                <div class="card-footer">
+                  Last 2 days
+                </div>
+                <div class="card-content">
+                  57
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Pull requests
+                </div>
+                <div class="card-footer">
+                  Last 30 days
+                </div>
+                <div class="card-content">
+                  7
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-warning"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Issues
+                </div>
+                <div class="card-footer">
+                  Last 30 days
+                </div>
+                <div class="card-content">
+                  2
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Stars
+                </div>
+                <div class="card-footer">
+                  Last 7 days
+                </div>
+                <div class="card-content">
+                  123
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa fa-twitter"></i>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  Followers
+                </div>
+                <div class="card-footer">
+                  Last 7 days
+                </div>
+                <div class="card-content">
+                  +63
+                </div>
+              </div>
+            </div>
+
+      </section>
+
+
+      <section class="main-panel-row white fat">
+        
+        <!-- <div class="eka" style="width: 50%;">
+          <div class="ct-chart" id="chart1"></div>
+        </div>
+        <div class="toka" style="width: 50%;">
+          <div class="ct-chart" id="chart2"></div>
+        </div> -->
+        <div class="col git-container">
+          <div class="chart-header">
+            <h2>Git Statistics</h2>
+            <p>Last 6 months</p>
+          </div>
+          <div class="chart-content">
+            <div class="ct-chart" id="git-chart"></div>
+          </div>
+          <div class="chart-footer">
+            <div class="chart-legend">
+              <span><i class="fa fa-circle blue"></i> Followers</span>
+              <span><i class="fa fa-circle yellow"></i> Stars</span>
+              <span><i class="fa fa-circle green"></i> Commits</span>
+            </div>
+            <hr>
+            <div class="chart-stats">
+              Updated 12 minutes ago
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section class="main-panel-row pie-row">
+        <div class="col white shadow pie-container">
+
+            <div class="chart-header">
+              <h2>Git Statistics</h2>
+              <p>Last 6 months</p>
+            </div>
+            <div class="chart-content">
+              <div class="ct-chart" id="pie-chart"></div>
+            </div>
+            <div class="chart-footer">
+              <div class="chart-legend">
+                <span><i class="fa fa-circle blue"></i> Followers</span>
+                <span><i class="fa fa-circle yellow"></i> Stars</span>
+                <span><i class="fa fa-circle green"></i> Commits</span>
+                <span><i class="fa fa-circle red"></i> dasdas</span>
+              </div>
+              <hr>
+              <div class="chart-stats">
+                Updated 12 minutes ago
+              </div>
+            </div>
+ 
+        </div>
+
+        <div class="col white shadow pie-container">
+
+            <div class="chart-header">
+              <h2>Git Statistics</h2>
+              <p>Last 6 months</p>
+            </div>
+            <div class="chart-content">
+              <div class="ct-chart" id="pie-chart-2"></div>
+            </div>
+            <div class="chart-footer">
+              <div class="chart-legend">
+                <span><i class="fa fa-circle blue"></i> Followers</span>
+                <span><i class="fa fa-circle yellow"></i> Stars</span>
+                <span><i class="fa fa-circle green"></i> Commits</span>
+                <span><i class="fa fa-circle red"></i> dasdas</span>
+              </div>
+              <hr>
+              <div class="chart-stats">
+                Updated 12 minutes ago
+              </div>
+            </div>
+ 
+        </div>
+
+        <!-- <div class="col white shadow">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="col white shadow">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div> -->
+      </section>
+
+      <section class="main-panel-row">
+        <div class="col white shadow">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- <footer>
+      Footer
+    </footer> -->
+  </main>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script> -->
+  <!-- <script type="text/javascript" src="js/chartist.js"></script> -->
+  <!-- build:js js/bundle.js -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

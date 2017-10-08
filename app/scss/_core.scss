@@ -1,0 +1,46 @@
+/*
+  dark background: #212120;
+  light background: #f1f1ed;
+  dark text: #212120;
+  light text: #f1f1ed;
+
+  hover background: #81d4fa;
+  hover text: #fff;
+
+  yellow badge: #ef9c34;
+  blue badge: #3cb9f3;
+
+  border: 1px solid rgba(115, 115, 114, 0.3);
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  color: #212120;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
