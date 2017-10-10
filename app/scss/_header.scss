@@ -1,0 +1,151 @@
+/* ================================= 
+  main content - header
+==================================== */
+
+header {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  border-bottom: $border;
+}
+
+.header-title {
+  font-size: $header-font-size;
+  margin: 0 20px;
+}
+
+.menu-button {
+  width: $header-height * 1.5;
+  min-width: $header-height * 1.5;
+  height: 100%;
+  padding: 0; 
+  font-size: $icon-size;
+  position: relative;
+
+  i {
+    transition: $transition-long;
+    pointer-events: none;
+  }
+
+  .fa-bell,
+  .fa-envelope,
+  .fa-cog {
+    transition: transform $transition-long + .1s;
+  }
+}
+
+.menu-button:hover {
+  background: $blue;
+
+  .fa-bell {
+    transform: rotate(45deg);
+  }
+
+  .fa-bars,
+  .fa-envelope {
+    transform: scale(1.2);
+  }
+
+  .fa-cog {
+    transform: rotate(90deg);
+  }
+}
+
+.search-form,
+#settings-btn,
+#messages-btn,
+#notification-btn {
+  display: none;
+}
+
+@media (min-width: 720px) {
+
+  .search-form,
+  #settings-btn,
+  #messages-btn,
+  #notification-btn {
+    display: block;
+  }
+
+}
+
+.search-form {  
+  flex: 1;
+  height: 100%;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  input {
+    border: none;
+    font-size: 1.1rem;
+    flex: 1;
+    padding: 0 10px;
+    border: 2px solid transparent;
+    transition: $transition-short;
+    background: $light;
+  }
+}
+
+.search-icon {
+  width: $header-height;
+  background: $light;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  order: -1;
+
+  i {
+    font-size: $icon-size;
+    transition: $transition-short;
+  }
+}
+
+#search:focus,
+#search:active {
+  background: #fff;
+}
+
+#search:hover + .search-icon,
+#search:focus + .search-icon,
+#search:active + .search-icon {
+  background: $blue;
+}
+
+#search:hover + .search-icon .fa-search,
+#search:focus + .search-icon .fa-search,
+#search:active + .search-icon .fa-search {
+  transform: scale(1.2);
+}
+
+#search:hover,
+#search:focus,
+#search:active{
+  outline:none;
+  border: 2px solid $blue;
+}
+
+// TODO
+.dropdown {
+  position: absolute;
+  background: pink;
+  min-width: 10rem;
+  margin: 1rem;
+  text-align: left;
+  border: 1px solid black;
+  border-radius: .25rem;
+  font-size: 1rem;
+  width: 320px;
+  right: 0;
+  margin-top: 16px;
+  padding: 20px;
+  display: none;
+  color: #000;
+}
+
+.show-dropdown {
+  display: block;
+}

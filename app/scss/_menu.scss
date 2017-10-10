@@ -1,0 +1,96 @@
+/* ================================= 
+  sidemenu
+==================================== */
+
+aside {
+  transition: width $transition-long, min-width $transition-long;
+  background: $dark;
+  color: $light;  
+}
+
+.open {
+  @extend aside;
+  min-width: $menu-width;
+  width: $menu-width;
+}
+
+.closed {
+  @extend aside;
+  min-width: 0;
+  width: 0;
+}
+
+nav {
+  width: $menu-width;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  padding: 15px 0;
+  border-bottom: $border;
+}
+
+.menu:nth-last-of-type(1) {
+  border: none;
+}
+
+.menu {
+  ul {
+    width: 100%;
+  }
+
+  li {
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    padding: 15px 0 15px 15px;
+    text-transform: uppercase;
+    transition: $transition-short;
+    position: relative;
+
+    .menu-item {
+      margin-left: 35px;
+    }
+
+    li.active {
+      border-left: 4px solid $blue;
+      color: $blue;
+    }
+
+    i {
+      position: absolute;
+      font-size: $icon-size;
+    }
+  }
+
+  li:hover,
+  li.active:hover {
+    background: $blue;
+    color: $dark;
+  }
+
+  .badge {
+    right: auto;
+    top: 7px;
+    left: 27px;
+  }
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: $border;
+  padding-bottom: 15px;
+
+  img {
+    width: 150px;
+    border-radius: 100px;
+    margin: 15px 0;
+    border: 2px solid $blue;
+  }
+
+  h2 {
+    margin: 0 10px;
+  }
+}

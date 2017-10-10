@@ -1,8 +1,6 @@
-var Chartist = require('chartist');
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  const sidemenuBtn = document.getElementById('sidemenu-button');
+  const menuBtn = document.getElementById('menu-button');
   const notificationBtn = document.getElementById('notification-btn');
   const messagesBtn = document.getElementById('messages-btn');
 
@@ -10,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const notificationDropdown = document.getElementById('notification-dropdown');
   const messagesDropdown = document.getElementById('messages-dropdown');
 
-  sidemenuBtn.addEventListener('click', e => {
+  menuBtn.addEventListener('click', e => {
     aside.classList.toggle('open');
     aside.classList.toggle('closed');
   });
@@ -52,12 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // CHARTS
   const gitData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
     series: [
       [12, 15, 15, 16, 18, 20, 25],
-      [5, 3, 4, 8, 7, 12, 22],
-      [3, 2, 4, 1, 7, 12, 20]
+      [5, 3, 7, 9, 10, 15, 23],
+      [3, 2, 4, 3, 7, 12, 13]
     ]
   };
 
@@ -104,5 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new Chartist.Pie('#pie-chart', pieData, pieOptions);
   new Chartist.Pie('#pie-chart-2', pieData, pieOptions);
+  // END OF CHARTS
 
 });
