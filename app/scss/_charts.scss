@@ -27,6 +27,15 @@
 
 }
 
+@media (min-width: 1200px) {
+
+  .pie-container {
+    flex: 0 0 calc(33% - 60px);
+    max-width: calc(33% - 60px);
+  }
+
+}
+
 .chart-header {
 
   h2 {

@@ -13,6 +13,7 @@ const csso = require('gulp-csso');
 const browserSync = require('browser-sync').create();
 const runSequence = require('run-sequence');
 const babel = require('gulp-babel');
+const pages = require('gulp-gh-pages');
 
 const options = {
   src: './app/',
@@ -39,7 +40,13 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('compileSass', () => {
-  return gulp.src(options.src + 'scss/app.scss')
+  return gulp.src([
+    options.src + 'scss/app.scss',
+    options.src + 'scss/default.scss',
+    options.src + 'scss/green.scss',
+    options.src + 'scss/red.scss',
+    options.src + 'scss/pink.scss'
+    ])
     .pipe(maps.init())
     .pipe(sass())
     .pipe(maps.write('./'))
@@ -72,7 +79,17 @@ gulp.task('html', ['compileSass'], () => {
 gulp.task('assets', () => {
   return gulp.src(options.src + 'vendor/font-awesome/fonts/**/*')
     .pipe(gulp.dest(options.src + 'fonts'));
-})
+});
+
+gulp.task('themes', () => {
+  return gulp.src([
+    options.src + 'css/default.css',
+    options.src + 'css/green.css',
+    options.src + 'css/red.css',
+    options.src + 'css/pink.css'
+    ])
+    .pipe(gulp.dest(options.dist + 'css'));
+});
 
 gulp.task('default', ['browserSync', 'compileSass', 'babel', 'assets'], () => {
   gulp.watch(options.src + 'scss/**/*.scss', ['compileSass']);
@@ -83,15 +100,21 @@ gulp.task('default', ['browserSync', 'compileSass', 'babel', 'assets'], () => {
 gulp.task('clean', () => {
   return del([
     options.dist,
-    options.src + 'css/app.css*',
+    options.src + 'css/*.css*',
     options.src + 'js/app.js*',
     options.src + 'fonts']);
 });
 
 gulp.task('build', ['clean'], (callback) => {
   runSequence(
-    'babel',
+    'babel',    
     ['html', 'images', 'fonts'],
+    'themes',
     callback
   )
+});
+
+gulp.task('deploy', () => {
+  return gulp.src(options.dist + '**/*')
+    .pipe(pages());
 });

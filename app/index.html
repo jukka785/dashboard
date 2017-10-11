@@ -7,6 +7,9 @@
   <!-- build:css css/app.min.css -->
   <link href="css/app.css" rel="stylesheet">
   <!-- endbuild -->
+
+  <link href="css/default.css" rel="stylesheet" id="theme">
+
   <title>Dashboard</title>
 </head>
 <body>
@@ -79,29 +82,161 @@
       </form>
       <!-- END OF SEARCH FORM -->
 
+      <!-- NOTIFICATION DROPDOWN -->
       <button id="notification-btn" class="menu-button">
         <i class="fa fa-bell"></i>
         <span class="badge yellowbg">5</span>
-        <ul id="notification-dropdown" class="dropdown">
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
+        <ul id="notification-dropdown" class="dropdown whitebg">
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="notification-content">
+                  <i class="fa fa-envelope"></i>You have 6 new messages
+                </div>
+                <div class="notification-footer">
+                  2 minutes ago
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="notification-content">
+                  <i class="fa fa-users"></i>You have 3 new pull requests
+                </div>
+                <div class="notification-footer">
+                  15 hours ago
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="notification-content">
+                  <i class="fa fa-warning"></i>You have 1 new issue
+                </div>
+                <div class="notification-footer">
+                  3 days ago
+                </div>
+              </div>
+            </div>            
+          </li>
+          <li>
+            <div class="dropdown-wrapper text-center">
+              <div class="dropdown-content">
+                <div class="notification-content">
+                  <i class="fa fa-bell"></i><span>View all notifications</span>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </button>
+      <!-- END OF NOTIFICATION DROPDOWN -->
 
+      <!-- MESSAGES DROPDOWN -->
       <button id="messages-btn" class="menu-button">
         <i class="fa fa-envelope"></i>
         <span class="badge bluebg">6</span>
-        <ul id="messages-dropdown" class="dropdown">
-          <li>item 4</li>
-          <li>item 5</li>
-          <li>item 6</li>
+        <ul id="messages-dropdown" class="dropdown whitebg">
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="messages-avatar">
+                  <img src="images/cat2.jpg">
+                </div>
+                <div class="messages-content">
+                  <h3>Nellikatti</h3>
+                  <span>sent you a message</span>
+                  <small>5 minutes ago</small>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="messages-avatar">
+                  <img src="images/scar.jpg">
+                </div>
+                <div class="messages-content">
+                  <h3>Matti</h3>
+                  <span>sent you a message</span>
+                  <small>2 hours ago</small>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="messages-avatar">
+                  <img src="images/dog.jpg">
+                </div>
+                <div class="messages-content">
+                  <h3>Jorma</h3>
+                  <span>sent you a message</span>
+                  <small>6 hours ago</small>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper">
+              <div class="dropdown-content">
+                <div class="messages-avatar">
+                  <img src="images/seppo.jpg">
+                </div>
+                <div class="messages-content">
+                  <h3>Seppo</h3>
+                  <span>sent you a message</span>
+                  <small>3 days ago</small>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-wrapper text-center">
+              <div class="dropdown-content">
+                <div class="notification-content">
+                  <i class="fa fa-envelope"></i><span>Read all messages</span>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </button>
+      <!-- END OF MESSAGES DROPDOWN -->
 
+      <!-- SETTINGS DROPDOWN -->
       <button id="settings-btn" class="menu-button">
         <i class="fa fa-cog"></i>
+        <ul id="settings-dropdown" class="settings-dropdown dropdown whitebg">
+          <li>
+            <h3>Color theme</h3>
+          </li>
+          <li>
+            <div id="default" class="color-theme">
+              <span class="bluebg"></span>
+            </div>
+
+            <div id="green" class="color-theme">
+              <span class="greenbg"></span>
+            </div>
+
+            <div id="red" class="color-theme">
+              <span class="redbg"></span>
+            </div>
+
+            <div id="pink" class="color-theme">
+              <span class="pinkbg"></span>
+            </div>
+          </li>
+        </ul>
       </button>
+      <!-- END OF SETTINGS DROPDOWN -->
     </header>
     <!-- END OF HEADER -->
 
@@ -250,50 +385,71 @@
 
         <div class="col whitebg shadow pie-container">
             <div class="chart-header">
-              <h2>Git Statistics</h2>
-              <p>Last 6 months</p>
+              <h2>Pie Chart</h2>
+              <p>Interesting statistics</p>
             </div>
             <div class="chart-content">
               <div class="ct-chart" id="pie-chart"></div>
             </div>
             <div class="chart-footer">
               <div class="chart-legend">
-                <span><i class="fa fa-circle blue"></i> Followers</span>
-                <span><i class="fa fa-circle yellow"></i> Stars</span>
-                <span><i class="fa fa-circle green"></i> Commits</span>
-                <span><i class="fa fa-circle red"></i> dasdas</span>
+                <span><i class="fa fa-circle blue"></i> Stat 1</span>
+                <span><i class="fa fa-circle yellow"></i> Stat 2</span>
+                <span><i class="fa fa-circle green"></i> Stat 3</span>
+                <span><i class="fa fa-circle red"></i> Stat 4</span>
               </div>
               <hr>
               <div class="chart-stats">
-                Updated 12 minutes ago
+                Updated 5 hours ago
               </div>
             </div> 
         </div>
 
         <div class="col whitebg shadow pie-container">
             <div class="chart-header">
-              <h2>Git Statistics</h2>
-              <p>Last 6 months</p>
+              <h2>Line chart (without lines)</h2>
+              <p>Super interesting statistics</p>
             </div>
             <div class="chart-content">
               <div class="ct-chart" id="pie-chart-2"></div>
             </div>
             <div class="chart-footer">
               <div class="chart-legend">
-                <span><i class="fa fa-circle blue"></i> Followers</span>
-                <span><i class="fa fa-circle yellow"></i> Stars</span>
-                <span><i class="fa fa-circle green"></i> Commits</span>
-                <span><i class="fa fa-circle red"></i> dasdas</span>
+                <span><i class="fa fa-circle blue"></i> Stat 1</span>
+                <span><i class="fa fa-circle yellow"></i> Stat 2</span>
+                <span><i class="fa fa-circle green"></i> Stat 3</span>
+                <span><i class="fa fa-circle red"></i> Stat 4</span>
               </div>
               <hr>
               <div class="chart-stats">
-                Updated 12 minutes ago
+                Updated 3 days ago
+              </div>
+            </div> 
+        </div>
+
+        <div class="col whitebg shadow pie-container">
+            <div class="chart-header">
+              <h2>Bar chart</h2>
+              <p>Boring statistics</p>
+            </div>
+            <div class="chart-content">
+              <div class="ct-chart" id="pie-chart-3"></div>
+            </div>
+            <div class="chart-footer">
+              <div class="chart-legend">
+                <span><i class="fa fa-circle blue"></i> Stat 1</span>
+                <span><i class="fa fa-circle yellow"></i> Stat 2</span>
+                <span><i class="fa fa-circle green"></i> Stat 3</span>
+              </div>
+              <hr>
+              <div class="chart-stats">
+                Updated 8 minutes ago
               </div>
             </div> 
         </div>
 
       </section>
-      <!-- END OF MORE CHARTS -->   
+      <!-- END OF MORE CHARTS -->
 
       <section class="main-panel-row thin">
         <div class="col whitebg shadow text">

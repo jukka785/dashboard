@@ -1,0 +1,56 @@
+$color: #ef522d; // red
+
+.menu-button:hover {
+  background: $color;
+}
+
+#search:hover + .search-icon,
+#search:focus + .search-icon,
+#search:active + .search-icon {
+  background: $color;
+}
+
+#search:hover,
+#search:focus,
+#search:active{
+  border: 2px solid $color;
+}
+
+.dropdown {
+  .dropdown-content {
+    .messages-avatar {
+      img {
+        border: 2px solid $color;
+      }
+    }
+
+    .messages-content,
+    .notification-content {
+      i {
+        color: $color;
+      }
+    }
+  }
+}
+
+.card-icon {
+  color: $color;
+}
+
+.menu {
+  .active {
+    border-left: 4px solid $color;
+    color: $color;
+  }
+
+  li:hover,
+  li.active:hover {
+    background: $color;
+  }
+}
+
+.avatar {
+  img {
+    border: 2px solid $color;
+  }
+}

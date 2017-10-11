@@ -36,6 +36,7 @@ $header-font-size: 1.5rem;
 $icon-size: 1.2rem;
 $icon-size-big: 1.8rem;
 $chart-meta-font-size: 0.9rem;
+$dropdown-font-size: 0.9rem;
 $badge-font: 0.75rem;
 $badge-font-color: #fff;
 $margin: 30px;
@@ -70,6 +71,10 @@ $card-content-font-weight: 300;
   background: #fff;
 }
 
+.pinkbg {
+  background: pink;
+}
+
 .blue {
   color: $blue;
 }
@@ -84,6 +89,10 @@ $card-content-font-weight: 300;
 
 .red {
   color: $red;
+}
+
+.pink {
+  color: pink;
 }
 
 /* ================================= 
@@ -131,4 +140,8 @@ button:hover {
   line-height: 1;
   color: $badge-font-color;
   pointer-events: none;
+}
+
+.text-center {
+  text-align: center !important;
 }

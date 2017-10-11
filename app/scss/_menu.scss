@@ -52,15 +52,15 @@ nav {
       margin-left: 35px;
     }
 
-    li.active {
-      border-left: 4px solid $blue;
-      color: $blue;
-    }
-
     i {
       position: absolute;
       font-size: $icon-size;
     }
+  }
+
+  .active {
+    border-left: 4px solid $blue;
+    color: $blue;
   }
 
   li:hover,

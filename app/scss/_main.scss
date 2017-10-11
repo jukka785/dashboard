@@ -122,6 +122,7 @@ main {
   max-width: 50%;
   margin-top: $margin;
   display: flex;
+  min-width: 150px;
 }
 
 @media (min-width: 768px) {

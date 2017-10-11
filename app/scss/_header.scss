@@ -128,24 +128,135 @@ header {
   border: 2px solid $blue;
 }
 
-// TODO
+/* ================================= 
+  dropdown
+==================================== */
+
 .dropdown {
   position: absolute;
-  background: pink;
   min-width: 10rem;
   margin: 1rem;
   text-align: left;
-  border: 1px solid black;
-  border-radius: .25rem;
-  font-size: 1rem;
-  width: 320px;
+  border: $border;
   right: 0;
   margin-top: 16px;
-  padding: 20px;
+  padding: $padding;
   display: none;
-  color: #000;
+
+  .dropdown-wrapper {
+    font-size: $dropdown-font-size;
+    color: $dark;
+    padding: $padding / 2;
+    width: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .dropdown-wrapper:hover {
+    background: $light;
+  }
+
+  .dropdown-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .messages-avatar {
+      img {
+        width: 64px;
+        border-radius: 100px;
+        margin-right: 10px;
+        border: 2px solid $blue;
+      }      
+    }
+
+    .messages-content {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      span {
+        font-size: 0.9rem !important;
+      }
+
+      small {
+        font-size: $dropdown-font-size;
+        color: $font-meta-color;
+      }
+    }
+
+    .messages-content,
+    .notification-content {
+      flex: 1;
+
+      i {
+        margin-right: 5px;
+        transform: none;
+        color: $blue;
+      }
+
+      .fa-envelope,
+      .fa-bell,
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    .notification-footer {
+      margin-left: 20px;
+      color: $font-meta-color;
+    }
+  }
+}
+
+.settings-dropdown {
+  display: none;
+
+  h3 {
+    font-size: 1rem;
+    margin: 0 0 10px 10px;
+  }
+
+  li {
+    display: flex;
+  }
+
+  span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    border: 3px solid transparent;
+    padding: 3px;
+    transition: $transition-long;
+  }
+
+  span:hover {
+    border-color: $dark;
+  }
+
+  // i {
+  //   // margin-left: 10px;
+  //   border: 3px solid transparent;
+  //   border-radius: 50%;
+  //   padding: 3px;
+  // }
+
+  // .color-theme:hover i {
+  //   border: 3px solid $blue;
+  // }
 }
 
 .show-dropdown {
   display: block;
+}
+
+.show-settings-dropdown {
+  display: flex;
+  flex-direction: column;
 }
