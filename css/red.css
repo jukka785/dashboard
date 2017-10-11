@@ -1,0 +1,35 @@
+.menu-button:hover {
+  background: #ef522d; }
+
+#search:hover + .search-icon,
+#search:focus + .search-icon,
+#search:active + .search-icon {
+  background: #ef522d; }
+
+#search:hover,
+#search:focus,
+#search:active {
+  border: 2px solid #ef522d; }
+
+.dropdown .dropdown-content .messages-avatar img {
+  border: 2px solid #ef522d; }
+
+.dropdown .dropdown-content .messages-content i,
+.dropdown .dropdown-content .notification-content i {
+  color: #ef522d; }
+
+.card-icon {
+  color: #ef522d; }
+
+.menu .active {
+  border-left: 4px solid #ef522d;
+  color: #ef522d; }
+
+.menu li:hover,
+.menu li.active:hover {
+  background: #ef522d; }
+
+.avatar img {
+  border: 2px solid #ef522d; }
+
+/*# sourceMappingURL=red.css.map */

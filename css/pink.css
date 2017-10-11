@@ -1,0 +1,35 @@
+.menu-button:hover {
+  background: pink; }
+
+#search:hover + .search-icon,
+#search:focus + .search-icon,
+#search:active + .search-icon {
+  background: pink; }
+
+#search:hover,
+#search:focus,
+#search:active {
+  border: 2px solid pink; }
+
+.dropdown .dropdown-content .messages-avatar img {
+  border: 2px solid pink; }
+
+.dropdown .dropdown-content .messages-content i,
+.dropdown .dropdown-content .notification-content i {
+  color: pink; }
+
+.card-icon {
+  color: pink; }
+
+.menu .active {
+  border-left: 4px solid pink;
+  color: pink; }
+
+.menu li:hover,
+.menu li.active:hover {
+  background: pink; }
+
+.avatar img {
+  border: 2px solid pink; }
+
+/*# sourceMappingURL=pink.css.map */
